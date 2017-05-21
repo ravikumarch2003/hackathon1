@@ -8,6 +8,7 @@ from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
 import time
+import hackathon1
 
 
 try:
@@ -20,7 +21,7 @@ except ImportError:
 # at ~/.credentials/gmail-python-quickstart.json
 SCOPES = 'https://www.googleapis.com/auth/gmail.readonly'
 #SCOPES = 'https://www.googleapis.com/auth/gmail.modify'
-CLIENT_SECRET_FILE = 'client_secret.json'
+CLIENT_SECRET_FILE = 'clientsecret.json'
 APPLICATION_NAME = 'Test Gmail API'
 
 
@@ -83,5 +84,7 @@ while (rc<2):
 	time.sleep(2)
 	rc=main()
 	if rc>0:
+                hackathon1.main()
 		break
 	 
+time.sleep(10)
